@@ -133,7 +133,7 @@ $c->sortby('FROM_UNIXTIME(`'.$sortBy.'`,"%Y") '.$sortDir.', FROM_UNIXTIME(`'.$so
 $c->groupby('FROM_UNIXTIME(`'.$sortBy.'`,"'.$sqlDateFormat.'")');
 /* if limiting to X records */
 if (!empty($limit)) { $c->limit($limit,$start); }
-$resources = $modx->getIterator('modResource',$c);
+$resources = $modx->getCollection('modResource',$c);
 
 /* iterate over resources */
 $output = array();
