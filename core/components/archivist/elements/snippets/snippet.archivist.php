@@ -139,7 +139,7 @@ $resources = $modx->getCollection('modResource',$c);
 $output = array();
 $groupByYearOutput = array();
 $idx = 0;
-$count = count($resources);
+$count = $modx->getCount('modResource',$c);
 /** @var modResource $resource */
 foreach ($resources as $resource) {
     $resourceArray = $resource->toArray();
